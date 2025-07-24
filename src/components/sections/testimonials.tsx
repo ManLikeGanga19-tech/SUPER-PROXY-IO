@@ -42,7 +42,7 @@ export function TestimonialsSection() {
                 >
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">Trusted by Thousands</h2>
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        Hear from our satisfied customers who use ProxyHub for their business needs.
+                        Hear from our satisfied customers who use SuperProxy for their business needs.
                     </p>
                 </motion.div>
 

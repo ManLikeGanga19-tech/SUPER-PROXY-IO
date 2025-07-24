@@ -48,7 +48,7 @@ export function FeaturesSection() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose ProxyHub</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose SuperProxy</h2>
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                         We provide the most reliable proxy marketplace with features designed for both buyers and sellers.
                     </p>

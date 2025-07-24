@@ -56,7 +56,7 @@ export function HeroSection() {
                                 </div>
                                 <div className="flex justify-between">
                                     <span className="text-muted-foreground">Location</span>
-                                    <span className="font-medium">United States</span>
+                                    <span className="font-medium">Nairobi, Kenya</span>
                                 </div>
                                 <div className="flex justify-between">
                                     <span className="text-muted-foreground">Speed</span>
