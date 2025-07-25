@@ -293,7 +293,7 @@ export function SiteHeader() {
                             <Link href="/login">Sign in</Link>
                         </Button>
                         <Button size="sm" asChild className="text-xs sm:text-sm">
-                            <Link href="/register">Get Started</Link>
+                            <Link href="/sign-up">Get Started</Link>
                         </Button>
                     </div>
                     <ModeToggle />
