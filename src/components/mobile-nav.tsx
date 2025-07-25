@@ -203,7 +203,7 @@ export function MobileNav() {
                                 <div className="px-4 py-4 border-t bg-background">
                                     <div className="space-y-3">
                                         <Button asChild className="w-full">
-                                            <Link href="/register" onClick={() => setOpen(false)}>
+                                            <Link href="/sign-up" onClick={() => setOpen(false)}>
                                                 Get Started
                                             </Link>
                                         </Button>
