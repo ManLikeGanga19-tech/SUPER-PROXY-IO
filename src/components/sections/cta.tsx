@@ -2,6 +2,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
 export function CtaSection() {
@@ -29,9 +30,11 @@ export function CtaSection() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <Button size="lg" className="px-8 py-6 text-lg">
-                            Create Account
-                        </Button>
+                        <Link href="/sign-up">
+                            <Button size="lg" className="px-8 py-6 text-lg">
+                                Create Account
+                            </Button>
+                        </Link>
                         <Button size="lg" variant="outline" className="px-8 py-6 text-lg">
                             Contact Sales
                         </Button>
