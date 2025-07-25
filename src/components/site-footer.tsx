@@ -5,13 +5,13 @@ import { Icons } from '@/components/icons';
 
 export function SiteFooter() {
     return (
-        <footer className="border-t">
-            <div className="container py-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <footer className="border-t bg-background">
+            <div className="container px-4 sm:px-6 lg:px-8 py-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                     <div>
                         <div className="flex items-center space-x-2 mb-4">
                             <div className="bg-primary w-8 h-8 rounded-lg flex items-center justify-center">
-                                <span className="text-white font-bold">SP</span>
+                                <span className="text-white dark:text-black font-bold">SP</span>
                             </div>
                             <span className="font-bold text-lg">SuperProxy</span>
                         </div>
@@ -65,13 +65,11 @@ export function SiteFooter() {
                     </div>
                 </div>
 
-                <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between items-center">
+                <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-sm text-muted-foreground">
                         © {new Date().getFullYear()} SuperProxy. All rights reserved.
                     </p>
-                    <div className="mt-4 md:mt-0">
-                        <ModeToggle />
-                    </div>
+                    <ModeToggle />
                 </div>
             </div>
         </footer>

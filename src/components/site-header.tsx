@@ -15,7 +15,6 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import {
@@ -26,8 +25,11 @@ import {
     BuildingIcon,
     WifiIcon,
     SmartphoneIcon,
-    ClockIcon
+    ClockIcon,
 } from 'lucide-react';
+
+// Navigation data arrays (unchanged)...
+// [navItems, proxyTypes, locations, datacenterPricing]
 
 export const navItems = [
     { name: 'Proxies', href: '#proxies', hasDropdown: true },
@@ -35,108 +37,71 @@ export const navItems = [
     { name: 'Locations', href: '#locations', hasDropdown: true },
 ];
 
-// Proxy types with icons
 export const proxyTypes = [
     {
-        name: "Residential Proxies",
-        description: "Real IP addresses from home users worldwide",
+        name: 'Residential Proxies',
+        description: 'Real IP addresses from home users worldwide',
         icon: HomeIcon,
-        href: "#residential"
+        href: '#residential',
     },
     {
-        name: "Datacenter Proxies",
-        description: "High-speed proxies from data centers",
+        name: 'Datacenter Proxies',
+        description: 'High-speed proxies from data centers',
         icon: ServerIcon,
-        href: "#datacenter"
+        href: '#datacenter',
     },
     {
-        name: "Enterprise Proxies",
-        description: "Dedicated solutions for large-scale operations",
+        name: 'Enterprise Proxies',
+        description: 'Dedicated solutions for large-scale operations',
         icon: BuildingIcon,
-        href: "#enterprise"
+        href: '#enterprise',
     },
     {
-        name: "ISP Proxies",
-        description: "Internet Service Provider residential IPs",
+        name: 'ISP Proxies',
+        description: 'Internet Service Provider residential IPs',
         icon: WifiIcon,
-        href: "#isp"
+        href: '#isp',
     },
     {
-        name: "Mobile Proxies",
-        description: "IPs from mobile devices and carriers",
+        name: 'Mobile Proxies',
+        description: 'IPs from mobile devices and carriers',
         icon: SmartphoneIcon,
-        href: "#mobile"
-    }
+        href: '#mobile',
+    },
 ];
 
-// Available locations with flags
 export const locations = [
-    {
-        name: "Kenya",
-        flag: "🇰🇪",
-        available: true
-    },
-    {
-        name: "Nigeria",
-        flag: "🇳🇬",
-        available: true
-    },
-    {
-        name: "South Africa",
-        flag: "🇿🇦",
-        available: true
-    },
-    {
-        name: "Tanzania",
-        flag: "🇹🇿",
-        available: true
-    }
+    { name: 'Kenya', flag: '🇰🇪', available: true },
+    { name: 'Nigeria', flag: '🇳🇬', available: true },
+    { name: 'South Africa', flag: '🇿🇦', available: true },
+    { name: 'Tanzania', flag: '🇹🇿', available: true },
 ];
 
-// Datacenter pricing plans from your pricing section
 export const datacenterPricing = [
     {
-        name: "Starter",
-        description: "For individuals and small projects",
-        price: "$0.45",
-        per: "per proxy",
-        features: [
-            "1,000+ IPs available",
-            "10 locations",
-            "Basic support",
-            "99.5% uptime"
-        ],
-        popular: false
+        name: 'Starter',
+        description: 'For individuals and small projects',
+        price: '$0.45',
+        per: 'per proxy',
+        features: ['1,000+ IPs available', '10 locations', 'Basic support', '99.5% uptime'],
+        popular: false,
     },
     {
-        name: "Professional",
-        description: "For growing businesses",
-        price: "$0.35",
-        per: "per proxy",
-        features: [
-            "10,000+ IPs available",
-            "50+ locations",
-            "Priority support",
-            "99.8% uptime",
-            "API access"
-        ],
-        popular: true
+        name: 'Professional',
+        description: 'For growing businesses',
+        price: '$0.35',
+        per: 'per proxy',
+        features: ['10,000+ IPs available', '50+ locations', 'Priority support', '99.8% uptime', 'API access'],
+        popular: true,
     },
     {
-        name: "Enterprise",
-        description: "For large-scale operations",
-        price: "Custom",
-        per: "volume pricing",
-        features: [
-            "100,000+ IPs available",
-            "150+ locations",
-            "24/7 dedicated support",
-            "99.9% uptime",
-            "Advanced API",
-            "Custom locations"
-        ],
-        popular: false
-    }
+        name: 'Enterprise',
+        description: 'For large-scale operations',
+        price: 'Custom',
+        per: 'volume pricing',
+        features: ['100,000+ IPs available', '150+ locations', '24/7 dedicated support', '99.9% uptime', 'Advanced API', 'Custom locations'],
+        popular: false,
+    },
 ];
 
 export function SiteHeader() {
@@ -149,10 +114,10 @@ export function SiteHeader() {
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <div className="container flex h-14 sm:h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+            <div className="container flex h-14 sm:h-16 items-center justify-between">
                 <Link href="/" className="flex items-center space-x-2 min-w-0 flex-shrink-0">
                     <div className="bg-primary w-6 h-6 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <span className="text-white font-bold text-xs sm:text-sm">SP</span>
+                        <span className="text-white dark:text-black font-bold text-xs sm:text-sm">SP</span>
                     </div>
                     <span className="font-bold text-lg sm:text-xl truncate">SuperProxy</span>
                 </Link>
@@ -165,14 +130,11 @@ export function SiteHeader() {
                                     <>
                                         <NavigationMenuTrigger
                                             className={cn(
-                                                "bg-transparent px-3 py-2 hover:bg-accent/50 border-none shadow-none",
-                                                "text-foreground hover:text-primary data-[state=open]:text-primary"
+                                                'bg-transparent px-3 py-2 hover:bg-accent/50 border-none shadow-none',
+                                                'text-foreground hover:text-primary data-[state=open]:text-primary'
                                             )}
                                         >
-                                            <div className="flex items-center">
-                                                {item.name}
-                                                {/* <ChevronDownIcon className="ml-1 h-4 w-4" /> */}
-                                            </div>
+                                            <div className="flex items-center">{item.name}</div>
                                         </NavigationMenuTrigger>
                                         <NavigationMenuContent>
                                             {item.name === 'Proxies' && (
@@ -185,7 +147,7 @@ export function SiteHeader() {
                                                     </div>
                                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                                         {proxyTypes.map((proxy, index) => {
-                                                            const IconComponent = proxy.icon;
+                                                            const Icon = proxy.icon;
                                                             return (
                                                                 <Link
                                                                     key={index}
@@ -193,7 +155,7 @@ export function SiteHeader() {
                                                                     className="flex items-center p-3 rounded-lg border hover:bg-accent transition-colors group"
                                                                 >
                                                                     <div className="mr-3 flex-shrink-0">
-                                                                        <IconComponent className="h-4 w-4 text-primary" />
+                                                                        <Icon className="h-4 w-4 text-primary" />
                                                                     </div>
                                                                     <div className="min-w-0">
                                                                         <h4 className="font-medium text-xs sm:text-sm group-hover:text-primary transition-colors">
@@ -233,9 +195,7 @@ export function SiteHeader() {
                                                                         </span>
                                                                     )}
                                                                 </div>
-                                                                <p className="text-xs sm:text-sm text-muted-foreground mb-3">
-                                                                    {plan.description}
-                                                                </p>
+                                                                <p className="text-xs sm:text-sm text-muted-foreground mb-3">{plan.description}</p>
                                                                 <div className="mb-3">
                                                                     <div className="text-xl sm:text-2xl font-bold">{plan.price}</div>
                                                                     <div className="text-xs sm:text-sm text-muted-foreground">{plan.per}</div>
@@ -248,21 +208,14 @@ export function SiteHeader() {
                                                                         </li>
                                                                     ))}
                                                                 </ul>
-                                                                <Button
-                                                                    size="sm"
-                                                                    className="w-full text-xs sm:text-sm"
-                                                                    variant={plan.popular ? "default" : "outline"}
-                                                                >
+                                                                <Button size="sm" className="w-full text-xs sm:text-sm" variant={plan.popular ? 'default' : 'outline'}>
                                                                     Get Started
                                                                 </Button>
                                                             </div>
                                                         ))}
                                                     </div>
                                                     <div className="mt-4 pt-4 border-t">
-                                                        <Link
-                                                            href="#pricing"
-                                                            className="text-xs sm:text-sm text-primary hover:underline font-medium"
-                                                        >
+                                                        <Link href="#pricing" className="text-xs sm:text-sm text-primary hover:underline font-medium">
                                                             View all pricing options →
                                                         </Link>
                                                     </div>
@@ -273,9 +226,7 @@ export function SiteHeader() {
                                                 <div className="w-[90vw] max-w-[350px] p-4 sm:p-6">
                                                     <div className="mb-4">
                                                         <h3 className="text-base sm:text-lg font-semibold mb-2">Available Locations</h3>
-                                                        <p className="text-xs sm:text-sm text-muted-foreground mb-4">
-                                                            Access proxies from key African markets
-                                                        </p>
+                                                        <p className="text-xs sm:text-sm text-muted-foreground mb-4">Access proxies from key African markets</p>
                                                     </div>
                                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
                                                         {locations.map((location, index) => (
@@ -289,9 +240,7 @@ export function SiteHeader() {
                                                                     <h4 className="font-medium text-xs sm:text-sm group-hover:text-primary transition-colors">
                                                                         {location.name}
                                                                     </h4>
-                                                                    <p className="text-xs text-muted-foreground">
-                                                                        Available
-                                                                    </p>
+                                                                    <p className="text-xs text-muted-foreground">Available</p>
                                                                 </div>
                                                             </Link>
                                                         ))}
@@ -307,10 +256,7 @@ export function SiteHeader() {
                                                     </Alert>
 
                                                     <div className="pt-2 border-t">
-                                                        <Link
-                                                            href="#locations"
-                                                            className="text-xs sm:text-sm text-primary hover:underline font-medium"
-                                                        >
+                                                        <Link href="#locations" className="text-xs sm:text-sm text-primary hover:underline font-medium">
                                                             View all locations →
                                                         </Link>
                                                     </div>
@@ -322,8 +268,8 @@ export function SiteHeader() {
                                     <Link href={item.href} legacyBehavior passHref>
                                         <NavigationMenuLink
                                             className={cn(
-                                                "px-3 py-2 text-foreground hover:text-primary hover:bg-accent/50 rounded-md transition-colors",
-                                                pathname === item.href ? "text-primary" : ""
+                                                'px-3 py-2 text-foreground hover:text-primary hover:bg-accent/50 rounded-md transition-colors',
+                                                pathname === item.href ? 'text-primary' : ''
                                             )}
                                         >
                                             {item.name}
@@ -351,8 +297,6 @@ export function SiteHeader() {
                         </Button>
                     </div>
                     <ModeToggle />
-
-                    {/* Mobile Navigation - Fixed z-index */}
                     <div className="lg:hidden">
                         <MobileNav />
                     </div>
