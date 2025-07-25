@@ -36,7 +36,7 @@ export const navItems = [
 ];
 
 // Proxy types with icons
-const proxyTypes = [
+export const proxyTypes = [
     {
         name: "Residential Proxies",
         description: "Real IP addresses from home users worldwide",
@@ -70,7 +70,7 @@ const proxyTypes = [
 ];
 
 // Available locations with flags
-const locations = [
+export const locations = [
     {
         name: "Kenya",
         flag: "🇰🇪",
@@ -94,7 +94,7 @@ const locations = [
 ];
 
 // Datacenter pricing plans from your pricing section
-const datacenterPricing = [
+export const datacenterPricing = [
     {
         name: "Starter",
         description: "For individuals and small projects",
@@ -144,7 +144,7 @@ export function SiteHeader() {
 
     return (
         <motion.header
-            className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur"
+            className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur"
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
@@ -351,7 +351,11 @@ export function SiteHeader() {
                         </Button>
                     </div>
                     <ModeToggle />
-                    <MobileNav />
+
+                    {/* Mobile Navigation - Fixed z-index */}
+                    <div className="lg:hidden">
+                        <MobileNav />
+                    </div>
                 </div>
             </div>
         </motion.header>

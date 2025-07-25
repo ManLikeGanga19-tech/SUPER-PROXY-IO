@@ -31,7 +31,7 @@ const testimonials = [
 
 export function TestimonialsSection() {
     return (
-        <section id="testimonials" className="py-24 bg-muted">
+        <section id="testimonials" className="py-24">
             <div className="container">
                 <motion.div
                     className="text-center mb-16"
