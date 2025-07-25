@@ -50,9 +50,9 @@ export function MobileNav() {
 
                         {/* Navigation panel */}
                         <motion.div
-                            initial={{ y: '-100%' }}
-                            animate={{ y: 0 }}
-                            exit={{ y: '-100%' }}
+                            initial={{ x: '100%' }}
+                            animate={{ x: 0 }}
+                            exit={{ x: '100%' }}
                             transition={{ type: 'spring', damping: 30, stiffness: 300 }}
                             className="fixed top-0 right-0 z-[9995] h-screen w-[300px] bg-background border-l shadow-xl overflow-hidden"
                         >
