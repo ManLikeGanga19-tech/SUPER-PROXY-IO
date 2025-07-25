@@ -1,4 +1,3 @@
-// components/mobile-nav.tsx
 'use client';
 
 import { useState } from 'react';
@@ -54,7 +53,7 @@ export function MobileNav() {
                             animate={{ x: 0 }}
                             exit={{ x: '100%' }}
                             transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-                            className="fixed top-0 right-0 z-[9995] h-screen w-[300px] bg-background border-l shadow-xl overflow-hidden"
+                            className="fixed top-0 right-0 z-[9995] h-dvh w-[300px] bg-background border-l shadow-xl overflow-hidden"
                         >
                             <div className="h-full flex flex-col">
                                 {/* Header */}

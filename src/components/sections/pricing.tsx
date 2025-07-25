@@ -72,7 +72,12 @@ const pricingPlans = [
 
 export function PricingSection() {
     return (
-        <section id="pricing" className="py-24">
+        <section id="pricing" className="relative min-h-screen py-20 flex items-center overflow-hidden bg-background">
+            <div className="absolute inset-0 -z-10">
+                <div className="absolute inset-0 bg-gradient-to-b from-background to-transparent" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
+            </div>
+
             <div className="container">
                 <motion.div
                     className="text-center mb-16"

@@ -7,11 +7,12 @@ import { Button } from '@/components/ui/button';
 export function CtaSection() {
     return (
         <section className="py-24 relative">
+            {/* Background Gradient */}
             <div className="absolute inset-0 -z-10">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10" />
             </div>
 
-            <div className="container text-center">
+            <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -22,6 +23,7 @@ export function CtaSection() {
                     <h2 className="text-3xl md:text-4xl font-bold mb-6">
                         Ready to Get Started?
                     </h2>
+
                     <p className="text-xl text-muted-foreground mb-10">
                         Join thousands of satisfied users and take control of your proxy needs today.
                     </p>
@@ -39,7 +41,9 @@ export function CtaSection() {
                         <p className="text-muted-foreground">
                             "SuperProxy has been a game-changer for our data collection efforts. The proxies are reliable and the dashboard makes management effortless."
                         </p>
-                        <div className="mt-4 font-medium">- Daniel Orwenjo, Lead Developer at DataInsights</div>
+                        <div className="mt-4 font-medium">
+                            - Daniel Orwenjo, Lead Developer at DataInsights
+                        </div>
                     </div>
                 </motion.div>
             </div>
