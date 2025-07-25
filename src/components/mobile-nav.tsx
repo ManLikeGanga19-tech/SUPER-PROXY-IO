@@ -60,7 +60,7 @@ export function MobileNav() {
                                 <div className="px-4 py-4 border-b bg-background">
                                     <div className="flex items-center space-x-2">
                                         <div className="bg-primary w-6 h-6 rounded-lg flex items-center justify-center">
-                                            <span className="text-white font-bold text-xs">SP</span>
+                                            <span className="text-white dark:text-black font-bold text-xs">SP</span>
                                         </div>
                                         <span className="font-bold text-lg">SuperProxy</span>
                                     </div>
