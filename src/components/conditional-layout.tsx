@@ -16,8 +16,8 @@ export function ConditionalLayout({ children }: ConditionalLayoutProps) {
         pathname?.startsWith('/register') ||
         pathname?.startsWith('/auth') ||
         pathname?.startsWith('/signin') ||
-        pathname?.startsWith('/sign-up');
-
+        pathname?.startsWith('/sign-up')||
+        pathname?.startsWith('/dashboard');
     if (isAuthRoute) {
         return (
             <div className="relative flex min-h-screen flex-col">

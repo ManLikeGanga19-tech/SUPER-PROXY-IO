@@ -1,6 +1,6 @@
 // components/site-footer.tsx
 import Link from 'next/link';
-import { ModeToggle } from '@/components/mode-toggle';
+import { Button } from '@/components/ui/button';
 import { Icons } from '@/components/icons';
 
 export function SiteFooter() {
@@ -69,7 +69,11 @@ export function SiteFooter() {
                     <p className="text-sm text-muted-foreground">
                         © {new Date().getFullYear()} SuperProxy. All rights reserved.
                     </p>
-                    <ModeToggle />
+                    <Link href="/dashboard">
+                        <Button size="sm" className="text-sm">
+                            Continue to Dashboard
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </footer>
