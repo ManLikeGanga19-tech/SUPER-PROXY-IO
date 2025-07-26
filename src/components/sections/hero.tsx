@@ -28,11 +28,11 @@ export function HeroSection() {
                         Buy and sell high-quality residential, datacenter, and mobile proxies with our secure marketplace.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                        <Button size="lg" className="text-lg px-8 py-6">
+                    <div className="flex flex-row gap-3 sm:gap-4 pt-4">
+                        <Button size="lg" className="text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 flex-1 sm:flex-initial">
                             Browse Proxies
                         </Button>
-                        <Button size="lg" variant="outline" className="text-lg px-8 py-6">
+                        <Button size="lg" variant="outline" className="text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 flex-1 sm:flex-initial">
                             Buy Proxies
                         </Button>
                     </div>

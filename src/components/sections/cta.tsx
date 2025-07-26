@@ -29,13 +29,13 @@ export function CtaSection() {
                         Join thousands of satisfied users and take control of your proxy needs today.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <Link href="/sign-up">
-                            <Button size="lg" className="px-8 py-6 text-lg">
+                    <div className="flex flex-row justify-center gap-2 sm:gap-4">
+                        <Link href="/sign-up" className="flex-1 sm:flex-initial">
+                            <Button size="sm" className="px-3 py-3 text-sm sm:text-lg sm:px-8 sm:py-6 w-full">
                                 Create Account
                             </Button>
                         </Link>
-                        <Button size="lg" variant="outline" className="px-8 py-6 text-lg">
+                        <Button size="sm" variant="outline" className="px-3 py-3 text-sm sm:text-lg sm:px-8 sm:py-6 flex-1 sm:flex-initial">
                             Contact Sales
                         </Button>
                     </div>
