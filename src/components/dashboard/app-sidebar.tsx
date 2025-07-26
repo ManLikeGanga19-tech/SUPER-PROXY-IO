@@ -26,6 +26,7 @@ import {
 import {
     Sidebar,
     SidebarContent,
+    SidebarFooter,
     SidebarGroup,
     SidebarGroupContent,
     SidebarGroupLabel,
@@ -35,9 +36,15 @@ import {
     SidebarMenuItem,
     SidebarRail,
 } from "@/components/ui/sidebar"
+import { NavUser } from "@/components/nav-user"
 
 // Proxy selling platform navigation data
 const data = {
+    user: {
+        name: "Daniel Orwenjo",
+        email: "orwenjodnaiel19@gmail.com",
+        avatar: "",
+    },
     navMain: [
         {
             title: "Dashboard",
@@ -268,6 +275,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                     </Collapsible>
                 ))}
             </SidebarContent>
+            <SidebarFooter>
+                <NavUser user={
+                    data.user
+                } />
+            </SidebarFooter>
             <SidebarRail />
         </Sidebar>
     )
